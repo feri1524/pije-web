@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pije y Pijesina 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(135deg, #c084fc, #7c3aed); /* Degradado de morados */
+      color: #000; /* Texto en blanco para mejor contraste */
+      text-align: center;
+      overflow-x: hidden;
+}
+
+    header {
+  padding: 1em;
+  background-color: #d8b4fe; /* Lila claro */
+  color: white;
+}
+    .contador {
+      font-size: 1.5em;
+      margin: 1em 0;
+    }
+    .carta {
+      margin: 2em;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 1.5em;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+      margin: 2em;
+    }
+   .galeria img {
+  width: 350px; /* Más ancha */
+  height: 350px; /* Más alta */
+  object-fit: cover; /* Ajuste sin deformar */
+  border-radius: 20px;
+  box-shadow: 0 0 10px #00000055;
+}
+
+    .mensajes {
+      margin-top: 2em;
+    }
+    .mensajes button {
+      background:  #c084fc
+;
+      color: #000;
+      border: none;
+      padding: 1em;
+      border-radius: 15px;
+      margin: 0.5em;
+      font-size: 1em;
+    }
+    .detallitos {
+      font-size: 1.2em;
+      margin: 2em;
+    }
+    .tele-vintage {
+      background-image: url("/mnt/data/a48e9c9f-792b-4ae6-b02a-681a1f511b02.png");
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      margin: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>💖 Pijesin y Pijesina 💖</h1>
+    <p class="contador" id="contador"></p>
+  </header>
+
+  <div class="carta">
+    <h2>Una carta para ti, mi amor 030</h2>
+    <p>
+      Pije hermoso, cada día contigo es como un episodio nuevo de una serie que quiero que dure para siempre. Eres lugar en el que siempre quiero estar, mi risa en los días grises y mi canción favorita en un día soleado. Si pudiera guardarte en una cajita, lo haría, así tenerte conmigo todo el día.  Gracias por ser mi tortuga eterna. Yo seré tu foca feliz siempre. 💕
+    </p>
+  </div>
+
+  <div class="tele-vintage"></div>
+
+  <div class="galeria">
+    <img src="foto1.jpg" alt="<3" />
+   
+  </div>
+
+  <div class="mensajes">
+    <button onclick="alert('Eres mi canción favorita 🎶')">💌</button>
+    <button onclick="alert('Tu mi pije y yo tu pijesina 🐢🤍🦭')">🐢 + 🦭</button>
+    <button onclick="alert('Quiero verte reír todos los días')">:3</button>
+  </div>
+
+  <div class="detallitos">
+    <p>🐢 Tortuga = tú. Foca = yo 🦭</p>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://www.youtube.com/watch?v=0qe5C6lYJ8I" type="audio/mp3" />
+    Tu navegador no soporta audio automático.
+  </audio>
+
+  <script>
+    const fechaInicio = new Date('2023-12-04');
+    const hoy = new Date();
+    const dias = Math.floor((hoy - fechaInicio) / (1000 * 60 * 60 * 24));
+    document.getElementById('contador').textContent = `Llevamos ${dias} días siendo los más pijes 🦭🐢`;
+  </script>
+</body>
+</html>
+<div class="juego">
+  <h2>💖 Mensajes secretos 💖</h2>
+  <p>Toca un corazón y descubre un mensaje 030 </p>
+
+  <button class="corazon" onclick="mostrarMensaje(0)">❤️</button>
+  <button class="corazon" onclick="mostrarMensaje(1)">💜</button>
+  <button class="corazon" onclick="mostrarMensaje(2)">💙</button>
+
+  <p id="mensaje"></p>
+</div>
+
+<script>
+  const mensajes = [
+    "Eres el amor más bonito que existe 💖🐢",
+    "No pudo pasarme nada más lindo que conocerte 💜",
+    "Cada día contigo es un regalo, mi Pije bonitooo 💙🦭"
+  ];
+
+  function mostrarMensaje(indice) {
+    document.getElementById("mensaje").textContent = mensajes[indice];
+  }
+</script>
+
+<style>
+  .juego {
+    margin: 2em;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1.5em;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .corazon {
+    background: transparent;
+    font-size: 2em;
+    border: none;
+    cursor: pointer;
+    margin: 0.5em;
+  }
+
+  #mensaje {
+    font-size: 1.2em;
+    margin-top: 1em;
+    font-weight: bold;
+  }
+</style>
